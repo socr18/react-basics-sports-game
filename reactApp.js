@@ -34,6 +34,25 @@ function Team (props) {
     )
 }
 
+function ScoreBoard(props) {
+    
+    return (
+        <div className="scoreBoard">
+            <button className="sButton">S c o r e B o a r d</button>
+            <div className="scoresWrap">
+                <div className="teamStats">
+                    <h3>Visitors</h3>
+                    <div className="teamScore">{props.visitingTeamStats.goals}</div>
+                </div>
+                <div className="teamStats">
+                    <h3>Home</h3>
+                    <div className="teamScore">{props.homeTeamStats.goals}</div>
+                </div>
+            </div>
+        </div>
+    )
+}
+
 class Game extends React.Component {
 
     constructor (props) {
@@ -99,6 +118,10 @@ class Game extends React.Component {
     render() {
         return  (
             <div className="Games">
+                <ScoreBoard
+                    visitingTeamStats={this.state.visitingTeamStats}
+                    homeTeamStats={this.state.homeTeamStats}
+                />
                 <h1>Welcome to {this.props.venue}</h1>
                 <div className="gameContainer">
                     <Team 

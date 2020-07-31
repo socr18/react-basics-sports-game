@@ -183,3 +183,32 @@ button {
 .percentage {
     font-size: 16px;
 }
+
+.sButton {
+    background: white;
+    border-radius: 0;
+    margin: 0 0 0 -8px;
+    display: flex;
+    flex-direction: column;
+    flex-flow: wrap;
+    justify-content: left;
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+    width: 36px;
+    float: left
+}
+
+.scoresWrap {
+    display: flex;
+    background: rgba(0, 0, 0, .4);
+    flex-direction: column;
+    float: left;
+    padding: 3px 10px 4px 10px;
+    justify-content: center;
+    float: left;
+}
+
+.teamStats {
+    text-align: center;
+    color: white;
+}
